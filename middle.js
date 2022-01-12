@@ -13,7 +13,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const middle = function(array) {
   let outPutArray = [];
-  let midIndex = Math.floor(array.length / 2);
+  let midIndex = Math.floor(array.length / 2); 
   if (array.length > 2) {
     if (array.length % 2 === 0) {
       outPutArray.push(array[midIndex - 1]);
