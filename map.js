@@ -1,21 +1,12 @@
-// const map = function (array, callback){
-//   let outputArray = [];
-//   for (let element of array){
-//     outputArray.push(callback(element));
-//   }
-//   return outputArray
-// }
-
-
-const map = function(array, callback) {
-  const results = [];
-  for (let item of array) {
-    console.log('item BEFORE: ', item);
-    console.log('item AFTER: ', callback(item));
-    console.log('---');
+const map = function (array, callback){
+  let outputArray = [];
+  for (let element of array){
+    outputArray.push(callback(element));
   }
-  return results;
+  return outputArray;
 }
+
+
 
 
 const words = ["ground", "control", "to", "major", "tom"];
