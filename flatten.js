@@ -1,15 +1,17 @@
-const flatten = function(array) {
+const flatten = function (array) {
   let flattenArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      for (let element of array[i]) {
+  const innerFunction = (array) => {
+    for (let element of array) {
+      if (Array.isArray(element)) {
+        innerFunction(element);
+      } else {
         flattenArray.push(element);
       }
-    } else {
-      flattenArray.push(array[i]);
     }
   }
+  innerFunction(array);
   return flattenArray;
-};
+}
 
-console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+
+  module.exports = flatten;

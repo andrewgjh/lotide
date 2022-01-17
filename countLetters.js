@@ -6,4 +6,6 @@ const countLetters = function(str){
   }
   return characterCount;
 }
-console.log(countLetters("Lighthouse Labs Web Development Bootcamp"));
+
+
+module.exports= countLetters;
